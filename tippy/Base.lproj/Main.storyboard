@@ -38,7 +38,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" misplaced="YES" id="rQh-pS-byI">
+                            <view contentMode="scaleToFill" misplaced="YES" id="rQh-pS-byI" userLabel="barView">
                                 <rect key="frame" x="16" y="250" width="378" height="10"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -147,15 +147,16 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="x7l-wm-ib0">
                                 <rect key="frame" x="345" y="305" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="darkThemeSwitch:" destination="Uhr-HZ-er8" eventType="valueChanged" id="DHU-wn-KwJ"/>
+                                </connections>
                             </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="ddt-u4-bkM"/>
                     <connections>
-                        <outlet property="darkThemeSwitch" destination="x7l-wm-ib0" id="npC-86-3al"/>
-                        <outlet property="defaultControl" destination="qQg-of-jtc" id="byE-ip-jOG"/>
-                        <outlet property="defaultSwitch" destination="EqD-Ub-KwW" id="IT3-Ny-wpl"/>
+                        <outlet property="switch1" destination="x7l-wm-ib0" id="Qm7-hR-SfZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xLA-TR-asS" userLabel="First Responder" sceneMemberID="firstResponder"/>

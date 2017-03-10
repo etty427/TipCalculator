@@ -15,6 +15,7 @@
 		289B7D841E70F28500BB95B9 /* tippyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B7D831E70F28500BB95B9 /* tippyTests.swift */; };
 		289B7D8F1E70F28500BB95B9 /* tippyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B7D8E1E70F28500BB95B9 /* tippyUITests.swift */; };
 		289B7D9D1E7107A000BB95B9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B7D9C1E7107A000BB95B9 /* SettingsViewController.swift */; };
+		34B1C2271E730B2D00FBC025 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B1C2261E730B2D00FBC025 /* ColorExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		289B7D8E1E70F28500BB95B9 /* tippyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tippyUITests.swift; sourceTree = "<group>"; };
 		289B7D901E70F28500BB95B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		289B7D9C1E7107A000BB95B9 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		34B1C2261E730B2D00FBC025 /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				289B7D6E1E70F28400BB95B9 /* AppDelegate.swift */,
+				34B1C2261E730B2D00FBC025 /* ColorExtension.swift */,
 				289B7D9C1E7107A000BB95B9 /* SettingsViewController.swift */,
 				289B7D701E70F28400BB95B9 /* TipViewController.swift */,
 				289B7D721E70F28400BB95B9 /* Main.storyboard */,
@@ -268,6 +271,7 @@
 				289B7D711E70F28400BB95B9 /* TipViewController.swift in Sources */,
 				289B7D6F1E70F28400BB95B9 /* AppDelegate.swift in Sources */,
 				289B7D9D1E7107A000BB95B9 /* SettingsViewController.swift in Sources */,
+				34B1C2271E730B2D00FBC025 /* ColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,6 +522,7 @@
 				289B7D951E70F28500BB95B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		289B7D961E70F28500BB95B9 /* Build configuration list for PBXNativeTarget "tippyTests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +531,7 @@
 				289B7D981E70F28500BB95B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		289B7D991E70F28500BB95B9 /* Build configuration list for PBXNativeTarget "tippyUITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +540,7 @@
 				289B7D9B1E70F28500BB95B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

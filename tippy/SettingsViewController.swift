@@ -10,18 +10,40 @@ import UIKit
 
 class SettingsViewController: UIViewController {
     
-    @IBOutlet weak var defaultSwitch: UISwitch!
-    @IBOutlet weak var defaultControl: UISegmentedControl!
-    @IBOutlet weak var darkThemeSwitch: UISwitch!
     
     
+    @IBOutlet weak var switch1: UISwitch!
+    
+    var defaults = UserDefaults.standard
+    var switchButton = "darkMode"
     
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+       if (defaults.object(forKey: "darkMode") != nil) {
+            switch1.isOn = defaults.bool(forKey: switchButton)
+           
+        }
+        //changeTheme()
+       
+    }
+    
+   
+    @IBAction func defaultPercentageSwitch(_ sender: UISwitch) {
 
 
     }
+    
+    @IBAction func darkThemeSwitch(_ sender: UISwitch) {
+        
+      //  changeTheme()
+        defaults.set(switch1.isOn, forKey: switchButton)
+
+    }
+    
+
 
 
 }
+
