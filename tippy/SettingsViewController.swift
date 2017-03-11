@@ -14,8 +14,6 @@ class SettingsViewController: UIViewController {
     
     @IBOutlet weak var switch1: UISwitch!
     @IBOutlet weak var tipSwitch: UISwitch!
-    @IBOutlet weak var defaultTipControl: UISegmentedControl!
-
 
     @IBAction func saveButtonPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -36,7 +34,10 @@ class SettingsViewController: UIViewController {
             
         }
        
-       
+        switch1.tintColor = UIColor.darkGray
+        switch1.thumbTintColor = UIColor.darkGray
+        tipSwitch.tintColor = UIColor.darkGray
+        tipSwitch.thumbTintColor = UIColor.darkGray
     }
     
    
