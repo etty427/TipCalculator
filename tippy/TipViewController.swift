@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class TipViewController: UIViewController {
     
    var settings = SettingsViewController()
@@ -19,6 +20,7 @@ class TipViewController: UIViewController {
     @IBOutlet weak var tipControl: UISegmentedControl!
     
     let defaults = UserDefaults.standard
+    
     
     var fromSettingsSwitch = false
     
@@ -35,8 +37,9 @@ class TipViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
         defaults.synchronize()
+        loadDefaults()
     }
     
     
@@ -54,6 +57,8 @@ class TipViewController: UIViewController {
         
         tipLabel.text = String(format: "$%.2f", tip)
         totalLabel.text = String(format: "$%.2f", total)
+        
+        defaults.set(billField.text, forKey: "billField")
         
     }
     
@@ -77,8 +82,9 @@ class TipViewController: UIViewController {
             defaults.synchronize()
         }
     }
-    
-    
-    
-    
+    func loadDefaults() {
+        let defaults = UserDefaults.standard
+        billField.text = defaults.object(forKey: "billField") as? String
+        
+    }
 }

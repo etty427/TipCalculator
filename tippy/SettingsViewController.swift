@@ -14,6 +14,7 @@ class SettingsViewController: UIViewController {
     
     @IBOutlet weak var switch1: UISwitch!
     @IBOutlet weak var tipSwitch: UISwitch!
+    @IBOutlet weak var defaultTipControl: UISegmentedControl!
 
 
     @IBAction func saveButtonPressed(_ sender: Any) {
@@ -48,6 +49,7 @@ class SettingsViewController: UIViewController {
         
        defaults.set(switch1.isOn, forKey: switchButton)
     }
+
 
     
 
