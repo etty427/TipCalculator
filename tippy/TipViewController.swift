@@ -40,6 +40,7 @@ class TipViewController: UIViewController {
     
         defaults.synchronize()
         loadDefaults()
+        localCurrency()
     }
     
     
@@ -86,5 +87,9 @@ class TipViewController: UIViewController {
         let defaults = UserDefaults.standard
         billField.text = defaults.object(forKey: "billField") as? String
         
+    }
+    func localCurrency() {
+
+       
     }
 }
