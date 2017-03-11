@@ -5,14 +5,14 @@
 //  Created by Ty rainey on 3/10/17.
 //  Copyright © 2017 Rainman Technologies. All rights reserved.
 //
-
+/*
 import Foundation
 import UIKit
 
 
 extension UserDefaults {
     
-    func colorForKey(key: String) -> UIColor {
+    func colorForKey(_ key: String) -> UIColor {
         var color: UIColor?
         if let colorData = data(forKey: key) {
             
@@ -22,7 +22,7 @@ extension UserDefaults {
         
     }
     
-    func setColor(color: UIColor?, forKey key: String) {
+    func setColor(_ color: UIColor?, forKey key: String) {
         var colorData: NSData?
         
         if let color = color {
@@ -34,3 +34,4 @@ extension UserDefaults {
     
     
 }
+*/

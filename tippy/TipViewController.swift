@@ -36,11 +36,7 @@ class TipViewController: UIViewController {
     override func viewDidLoad() {
     super.viewDidLoad()
         
-
-        
         defaults.synchronize()
-        
-
     }
 
 
@@ -80,6 +76,8 @@ class TipViewController: UIViewController {
             defaults.synchronize()
         }
     }
+    
+    
     
 
 }

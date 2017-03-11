@@ -88,8 +88,12 @@
                     </view>
                     <navigationItem key="navigationItem" title="Tip Calculator" id="0Jl-0F-eF0">
                         <barButtonItem key="rightBarButtonItem" title="Settings" id="vZY-vi-ddp">
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                            </userDefinedRuntimeAttributes>
                             <connections>
-                                <segue destination="Uhr-HZ-er8" kind="push" id="KvJ-eo-B4Z"/>
+                                <segue destination="Pc8-bW-IvA" kind="push" customClass="CustomSegues" customModule="tippy" id="KvJ-eo-B4Z"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -109,7 +113,7 @@
             </objects>
             <point key="canvasLocation" x="530" y="154"/>
         </scene>
-        <!--Settings View Controller-->
+        <!--Settings-->
         <scene sceneID="e6x-A9-ZkO">
             <objects>
                 <viewController id="Uhr-HZ-er8" customClass="SettingsViewController" customModule="tippy" customModuleProvider="target" sceneMemberID="viewController">
@@ -154,14 +158,20 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ddt-u4-bkM"/>
+                    <navigationItem key="navigationItem" title="Settings" id="ddt-u4-bkM">
+                        <barButtonItem key="leftBarButtonItem" systemItem="save" id="q6b-uC-2ds">
+                            <connections>
+                                <action selector="saveButtonPressed:" destination="Uhr-HZ-er8" id="PNb-kj-6fh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="switch1" destination="x7l-wm-ib0" id="Qm7-hR-SfZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xLA-TR-asS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1094" y="148"/>
+            <point key="canvasLocation" x="988" y="154"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mRv-sx-Ilu">
@@ -179,7 +189,26 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZV6-0u-xSy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="85.5" y="154.5"/>
+            <point key="canvasLocation" x="530" y="-695"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="aXB-h1-fr2">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GeU-ox-kCE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Pc8-bW-IvA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Y0o-hk-G4b"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9CR-Ih-1Se">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Uhr-HZ-er8" kind="relationship" relationship="rootViewController" id="2zB-2E-2GE"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="1089" y="-695"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
