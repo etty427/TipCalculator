@@ -43,7 +43,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="rrL-aq-6dO">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Bill Amount" textAlignment="right" minimumFontSize="17" id="rrL-aq-6dO">
                                 <rect key="frame" x="199" y="83" width="195" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -53,7 +53,7 @@
                                     <action selector="calculate:" destination="BYZ-38-t0r" eventType="editingChanged" id="euz-KT-eUS"/>
                                 </connections>
                             </textField>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" id="0dg-UV-TzU">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" id="0dg-UV-TzU">
                                 <rect key="frame" x="16" y="354" width="378" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
@@ -88,12 +88,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Tip Calculator" id="0Jl-0F-eF0">
                         <barButtonItem key="rightBarButtonItem" title="Settings" id="vZY-vi-ddp">
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
-                                <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
-                            </userDefinedRuntimeAttributes>
                             <connections>
-                                <segue destination="Pc8-bW-IvA" kind="push" customClass="CustomSegues" customModule="tippy" id="KvJ-eo-B4Z"/>
+                                <segue destination="Pc8-bW-IvA" kind="custom" customClass="CustomSegues" customModule="tippy" id="KvJ-eo-B4Z"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -131,12 +127,15 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="EqD-Ub-KwW">
                                 <rect key="frame" x="345" y="124" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="defaultPercentageSwitch:" destination="Uhr-HZ-er8" eventType="valueChanged" id="26x-sU-ls8"/>
+                                </connections>
                             </switch>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="qQg-of-jtc">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="qQg-of-jtc">
                                 <rect key="frame" x="20" y="193" width="374" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
-                                    <segment title="10%"/>
+                                    <segment title="18%"/>
                                     <segment title="20%"/>
                                     <segment title="25%"/>
                                 </segments>
@@ -167,11 +166,12 @@
                     </navigationItem>
                     <connections>
                         <outlet property="switch1" destination="x7l-wm-ib0" id="Qm7-hR-SfZ"/>
+                        <outlet property="tipSwitch" destination="EqD-Ub-KwW" id="9CD-li-gg0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xLA-TR-asS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="988" y="154"/>
+            <point key="canvasLocation" x="1051" y="250"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mRv-sx-Ilu">

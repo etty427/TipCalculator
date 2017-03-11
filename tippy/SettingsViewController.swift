@@ -13,6 +13,7 @@ class SettingsViewController: UIViewController {
     
     
     @IBOutlet weak var switch1: UISwitch!
+    @IBOutlet weak var tipSwitch: UISwitch!
 
 
     @IBAction func saveButtonPressed(_ sender: Any) {
@@ -20,7 +21,8 @@ class SettingsViewController: UIViewController {
     }
     var defaults = UserDefaults.standard
     var switchButton = "darkMode"
-    
+    var tipSwitchButton = "defaultSwitch"
+  
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,30 +30,26 @@ class SettingsViewController: UIViewController {
             switch1.isOn = defaults.bool(forKey: switchButton)
            
         }
+       if (defaults.object(forKey: "defaultSwitch") != nil) {
+            tipSwitch.isOn = defaults.bool(forKey: tipSwitchButton)
+            
+        }
        
        
     }
     
    
     @IBAction func defaultPercentageSwitch(_ sender: UISwitch) {
-
-
+        
+        defaults.set(tipSwitch.isOn, forKey:tipSwitchButton)
     }
     
     @IBAction func darkThemeSwitch(_ sender: UISwitch) {
         
-     
-        defaults.set(switch1.isOn, forKey: switchButton)
-
+       defaults.set(switch1.isOn, forKey: switchButton)
     }
-    @IBAction func prepareForUnwind(_ segue:UIStoryboardSegue) {
-        performSegue(withIdentifier: "dismiss", sender: self)
-    }
-    
 
     
-
-
 
 }
 

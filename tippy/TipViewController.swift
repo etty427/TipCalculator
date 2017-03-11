@@ -25,23 +25,23 @@ class TipViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-      fromSettingsSwitch = defaults.bool(forKey: settings.switchButton)
-      changeTheme()
+        fromSettingsSwitch = defaults.bool(forKey: settings.switchButton)
+        changeTheme()
         
     }
     override func viewDidAppear(_ animated: Bool) {
-        //billField.becomeFirstResponder()
+        billField.becomeFirstResponder()
     }
-
+    
     override func viewDidLoad() {
-    super.viewDidLoad()
+        super.viewDidLoad()
         
         defaults.synchronize()
     }
-
-
+    
+    
     @IBAction func onTap(_ sender: Any) {
-        view.endEditing(true)
+       // view.endEditing(true)
     }
     
     @IBAction func calculate(_ sender: AnyObject) {
@@ -56,10 +56,11 @@ class TipViewController: UIViewController {
         totalLabel.text = String(format: "$%.2f", total)
         
     }
+    
     func changeTheme() {
-
+        
         if fromSettingsSwitch {
-          
+            
             view.backgroundColor = UIColor.lightGray
             tipLabel.textColor = UIColor.white
             totalLabel.textColor = UIColor.white
@@ -68,7 +69,7 @@ class TipViewController: UIViewController {
             defaults.synchronize()
         }
         else {
-          
+            
             view.backgroundColor = UIColor.white
             tipLabel.textColor = UIColor.gray
             totalLabel.textColor = UIColor.gray
@@ -79,6 +80,5 @@ class TipViewController: UIViewController {
     
     
     
-
+    
 }
-
