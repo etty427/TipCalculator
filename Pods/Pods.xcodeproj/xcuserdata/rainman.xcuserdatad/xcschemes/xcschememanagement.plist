@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Money.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-tippy.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-tippyTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-tippyUITests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ValueCoding.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>54AED01D501CA6ECACC48672240509A5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AEDB6D448E957630CD14980104634F66</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D3A897450076E2E63631A75486A91410</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E57588911D7862C40A39CB385AC204EC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E6E55CA43FB5A565FB45A242B26346F0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

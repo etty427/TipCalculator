@@ -53,7 +53,7 @@
                                     <action selector="calculate:" destination="BYZ-38-t0r" eventType="editingChanged" id="euz-KT-eUS"/>
                                 </connections>
                             </textField>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" id="0dg-UV-TzU">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" id="0dg-UV-TzU">
                                 <rect key="frame" x="16" y="354" width="378" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
@@ -121,38 +121,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Local currency" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ioh-9T-Ld0">
-                                <rect key="frame" x="20" y="123" width="128" height="33"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tip % at Start Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ioh-9T-Ld0">
+                                <rect key="frame" x="20" y="123" width="154" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="EqD-Ub-KwW">
-                                <rect key="frame" x="345" y="124" width="51" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="defaultPercentageSwitch:" destination="Uhr-HZ-er8" eventType="valueChanged" id="26x-sU-ls8"/>
-                                </connections>
-                            </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Dark Theme" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2WY-On-Mju">
-                                <rect key="frame" x="20" y="190" width="105" height="31"/>
+                                <rect key="frame" x="20" y="258" width="105" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="x7l-wm-ib0">
-                                <rect key="frame" x="345" y="190" width="51" height="31"/>
+                                <rect key="frame" x="345" y="258" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="darkThemeSwitch:" destination="Uhr-HZ-er8" eventType="valueChanged" id="DHU-wn-KwJ"/>
                                 </connections>
                             </switch>
-                            <imageView userInteractionEnabled="NO" alpha="0.10000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="money pic" id="m0Z-8L-tdD">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" id="BUC-5D-I2d">
+                                <rect key="frame" x="20" y="172" width="374" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                                <segments>
+                                    <segment title="18%"/>
+                                    <segment title="20%"/>
+                                    <segment title="25%"/>
+                                </segments>
+                                <connections>
+                                    <action selector="defaultPercentage:" destination="Uhr-HZ-er8" eventType="valueChanged" id="EgF-j8-7Iw"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -164,8 +165,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="percentButton" destination="BUC-5D-I2d" id="1UR-8g-QKB"/>
                         <outlet property="switch1" destination="x7l-wm-ib0" id="Qm7-hR-SfZ"/>
-                        <outlet property="tipSwitch" destination="EqD-Ub-KwW" id="9CD-li-gg0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xLA-TR-asS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -193,7 +194,6 @@
         <!--Navigation Controller-->
         <scene sceneID="aXB-h1-fr2">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GeU-ox-kCE" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Pc8-bW-IvA" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="Y0o-hk-G4b"/>
@@ -206,6 +206,7 @@
                         <segue destination="Uhr-HZ-er8" kind="relationship" relationship="rootViewController" id="2zB-2E-2GE"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GeU-ox-kCE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1089" y="-695"/>
         </scene>

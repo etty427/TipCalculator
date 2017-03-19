@@ -20,27 +20,50 @@ class TipViewController: UIViewController {
     @IBOutlet weak var tipControl: UISegmentedControl!
     
     let defaults = UserDefaults.standard
+    let tipPercentages = [0.18,0.2,0.25]
     
     
     var fromSettingsSwitch = false
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        fromSettingsSwitch = defaults.bool(forKey: settings.switchButton)
+
         changeTheme()
+        
+        if tipControl != nil {
+            
+            tipControl.selectedSegmentIndex = defaults.integer(forKey: settings.segSwitchButton)
+            
+        }
+        else
+        {
+            tipControl.isEnabledForSegment(at: 0)
+        }
         
     }
     override func viewDidAppear(_ animated: Bool) {
+        
         billField.becomeFirstResponder()
+        
+
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
     
-        defaults.synchronize()
         loadDefaults()
-        localCurrency()
+        
+        
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.locale = NSLocale.current
+        tipLabel.text = formatter.string(from: 0)
+        totalLabel.text = formatter.string(from: 0)
+        
+       
+        let billFieldPlaceholder = NSLocale.current.currencySymbol
+        self.billField!.placeholder = billFieldPlaceholder
+        defaults.synchronize()
     }
     
     
@@ -52,14 +75,23 @@ class TipViewController: UIViewController {
         
         let tipPercentages = [0.18,0.2,0.25]
         
-        let bill = Double(billField.text!) ?? 0
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        formatter.locale = NSLocale.current
+        
+        let bill = Double(formatter.number(from: String(billField.text!)) ?? 0.0)
         let tip = bill * tipPercentages[tipControl.selectedSegmentIndex]
         let total = bill + tip
+        formatter.numberStyle = .currency
+        tipLabel.text = formatter.string(from: NSNumber(value: tip))
+        totalLabel.text = formatter.string(from: NSNumber(value: total))
         
         tipLabel.text = String(format: "$%.2f", tip)
         totalLabel.text = String(format: "$%.2f", total)
         
+        let defaults = UserDefaults.standard
         defaults.set(billField.text, forKey: "billField")
+        defaults.synchronize()
         
     }
     
@@ -88,8 +120,8 @@ class TipViewController: UIViewController {
         billField.text = defaults.object(forKey: "billField") as? String
         
     }
-    func localCurrency() {
-
-       
+    func defaultTipFromSettings() {
+        
+        
     }
 }

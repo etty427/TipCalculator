@@ -1,0 +1,15 @@
+PODS:
+  - Money (2.0.1):
+    - ValueCoding (~> 2)
+  - ValueCoding (2.1.0)
+
+DEPENDENCIES:
+  - Money
+
+SPEC CHECKSUMS:
+  Money: 6faa689f86c455112971c900e8a31fa0b9c02365
+  ValueCoding: f18cd2f0c941c43e06669717ca25aeed02d702a9
+
+PODFILE CHECKSUM: 39982ef77f5693248e3c96326cbd4f95bda14ba3
+
+COCOAPODS: 1.2.0
