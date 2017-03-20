@@ -10,6 +10,7 @@ import UIKit
 
 class SettingsViewController: UIViewController {
     
+    var switchON : Bool = false
     var defaults = UserDefaults.standard
     var switchButton = "darkMode"
     var segSwitchButton = "defaultSwitch"
@@ -25,11 +26,12 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       if (defaults.object(forKey: "darkMode") != nil) {
-        
+        if (defaults.object(forKey: "darkMode") != nil) {
+            
             switch1.isOn = defaults.bool(forKey: switchButton)
-           
+            
         }
+
         if defaults.object(forKey: "defaultSwitch") != nil {
         
         percentButton.selectedSegmentIndex = defaults.integer(forKey: segSwitchButton)
@@ -42,6 +44,9 @@ class SettingsViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+
+        
+        
         let defaultTipPercent = defaults.integer(forKey: segSwitchButton)
             percentButton.selectedSegmentIndex = defaultTipPercent
     }
@@ -49,7 +54,18 @@ class SettingsViewController: UIViewController {
     
     @IBAction func darkThemeSwitch(_ sender: UISwitch) {
         
-       defaults.set(switch1.isOn, forKey: switchButton)
+      // defaults.set(switch1.isOn, forKey: switchButton)
+        
+        if switch1.isOn{
+            switchON = true
+            defaults.set(switchON, forKey: "darkMode")
+        }
+        if switch1.isOn == false{
+            switchON = false
+            defaults.set(switchON, forKey: "darkMode")
+        }
+        
+  
     }
 
     @IBAction func defaultPercentage(_ sender: UISegmentedControl) {

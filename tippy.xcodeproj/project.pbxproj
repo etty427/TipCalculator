@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		289B7D6F1E70F28400BB95B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B7D6E1E70F28400BB95B9 /* AppDelegate.swift */; };
-		289B7D711E70F28400BB95B9 /* TipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B7D701E70F28400BB95B9 /* TipViewController.swift */; };
 		289B7D741E70F28400BB95B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 289B7D721E70F28400BB95B9 /* Main.storyboard */; };
 		289B7D761E70F28400BB95B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 289B7D751E70F28400BB95B9 /* Assets.xcassets */; };
 		289B7D791E70F28400BB95B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 289B7D771E70F28400BB95B9 /* LaunchScreen.storyboard */; };
 		289B7D841E70F28500BB95B9 /* tippyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B7D831E70F28500BB95B9 /* tippyTests.swift */; };
 		289B7D8F1E70F28500BB95B9 /* tippyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B7D8E1E70F28500BB95B9 /* tippyUITests.swift */; };
 		289B7D9D1E7107A000BB95B9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B7D9C1E7107A000BB95B9 /* SettingsViewController.swift */; };
+		3469C3F51E7F5BB200A0571F /* TipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3469C3F41E7F5BB200A0571F /* TipViewController.swift */; };
 		34B1C2271E730B2D00FBC025 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B1C2261E730B2D00FBC025 /* ColorExtension.swift */; };
 		34B1C2291E73614400FBC025 /* CustomSegues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B1C2281E73614400FBC025 /* CustomSegues.swift */; };
 		795311BDF43E50672DEB350A /* Pods_tippyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 488F8ADBA49E7622DBAD8235 /* Pods_tippyUITests.framework */; };
@@ -43,7 +43,6 @@
 		1897F92635494CDA41555DEE /* Pods-tippy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tippy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tippy/Pods-tippy.debug.xcconfig"; sourceTree = "<group>"; };
 		289B7D6B1E70F28400BB95B9 /* tippy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tippy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		289B7D6E1E70F28400BB95B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		289B7D701E70F28400BB95B9 /* TipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipViewController.swift; sourceTree = "<group>"; };
 		289B7D731E70F28400BB95B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		289B7D751E70F28400BB95B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		289B7D781E70F28400BB95B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,6 +54,7 @@
 		289B7D8E1E70F28500BB95B9 /* tippyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tippyUITests.swift; sourceTree = "<group>"; };
 		289B7D901E70F28500BB95B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		289B7D9C1E7107A000BB95B9 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		3469C3F41E7F5BB200A0571F /* TipViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipViewController.swift; sourceTree = "<group>"; };
 		34B1C2261E730B2D00FBC025 /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		34B1C2281E73614400FBC025 /* CustomSegues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSegues.swift; sourceTree = "<group>"; };
 		488F8ADBA49E7622DBAD8235 /* Pods_tippyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tippyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,8 +122,8 @@
 			children = (
 				289B7D6E1E70F28400BB95B9 /* AppDelegate.swift */,
 				34B1C2261E730B2D00FBC025 /* ColorExtension.swift */,
+				3469C3F41E7F5BB200A0571F /* TipViewController.swift */,
 				289B7D9C1E7107A000BB95B9 /* SettingsViewController.swift */,
-				289B7D701E70F28400BB95B9 /* TipViewController.swift */,
 				34B1C2281E73614400FBC025 /* CustomSegues.swift */,
 				289B7D721E70F28400BB95B9 /* Main.storyboard */,
 				289B7D751E70F28400BB95B9 /* Assets.xcassets */,
@@ -461,10 +461,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				289B7D711E70F28400BB95B9 /* TipViewController.swift in Sources */,
 				34B1C2291E73614400FBC025 /* CustomSegues.swift in Sources */,
 				289B7D6F1E70F28400BB95B9 /* AppDelegate.swift in Sources */,
 				289B7D9D1E7107A000BB95B9 /* SettingsViewController.swift in Sources */,
+				3469C3F51E7F5BB200A0571F /* TipViewController.swift in Sources */,
 				34B1C2271E730B2D00FBC025 /* ColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

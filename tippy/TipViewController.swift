@@ -22,13 +22,17 @@ class TipViewController: UIViewController {
     let defaults = UserDefaults.standard
     let tipPercentages = [0.18,0.2,0.25]
     
+    var switchOn = false
     
-    var fromSettingsSwitch = false
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
-        changeTheme()
+        
+        
+        
+        let defaults = UserDefaults.standard
+        
+        switchOn = defaults.bool(forKey: settings.switchButton)
         
         if tipControl != nil {
             
@@ -40,17 +44,24 @@ class TipViewController: UIViewController {
             tipControl.isEnabledForSegment(at: 0)
         }
         
+        changeTheme()
+        
     }
+    
     override func viewDidAppear(_ animated: Bool) {
         
         billField.becomeFirstResponder()
-        
+     
+
 
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+
     
+        
         loadDefaults()
         
         
@@ -63,6 +74,8 @@ class TipViewController: UIViewController {
        
         let billFieldPlaceholder = NSLocale.current.currencySymbol
         self.billField!.placeholder = billFieldPlaceholder
+        
+    
         defaults.synchronize()
     }
     
@@ -72,7 +85,45 @@ class TipViewController: UIViewController {
     }
     
     @IBAction func calculate(_ sender: AnyObject) {
+        updateTip()
+
         
+    }
+        
+        func changeTheme() {
+            
+            if switchOn {
+                
+                view.backgroundColor = UIColor.lightGray
+                tipLabel.textColor = UIColor.white
+                totalLabel.textColor = UIColor.white
+                tipControl.tintColor = UIColor.white
+                
+                defaults.synchronize()
+            }
+            else {
+                
+                view.backgroundColor = UIColor.white
+                tipLabel.textColor = UIColor.gray
+                totalLabel.textColor = UIColor.gray
+                tipControl.tintColor = UIColor.blue
+                defaults.synchronize()
+            }
+        }
+    
+
+    
+    func loadDefaults() {
+        let defaults = UserDefaults.standard
+        billField.text = defaults.object(forKey: "billField") as? String
+        
+    }
+    @IBAction func onEditingChanged(sender: AnyObject) {
+        updateTip()
+
+    }
+
+    func updateTip() {
         let tipPercentages = [0.18,0.2,0.25]
         
         let formatter = NumberFormatter()
@@ -92,36 +143,5 @@ class TipViewController: UIViewController {
         let defaults = UserDefaults.standard
         defaults.set(billField.text, forKey: "billField")
         defaults.synchronize()
-        
-    }
-    
-    func changeTheme() {
-        
-        if fromSettingsSwitch {
-            
-            view.backgroundColor = UIColor.lightGray
-            tipLabel.textColor = UIColor.white
-            totalLabel.textColor = UIColor.white
-            tipControl.tintColor = UIColor.white
-            
-            defaults.synchronize()
-        }
-        else {
-            
-            view.backgroundColor = UIColor.white
-            tipLabel.textColor = UIColor.gray
-            totalLabel.textColor = UIColor.gray
-            tipControl.tintColor = UIColor.blue
-            defaults.synchronize()
-        }
-    }
-    func loadDefaults() {
-        let defaults = UserDefaults.standard
-        billField.text = defaults.object(forKey: "billField") as? String
-        
-    }
-    func defaultTipFromSettings() {
-        
-        
     }
 }
