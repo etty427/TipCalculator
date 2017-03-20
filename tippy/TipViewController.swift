@@ -9,7 +9,7 @@
 import UIKit
 
 
-class TipViewController: UIViewController {
+class TipViewController: UIViewController, UITextFieldDelegate {
     
    var settings = SettingsViewController()
 
@@ -27,7 +27,6 @@ class TipViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         
         
         let defaults = UserDefaults.standard
@@ -77,6 +76,10 @@ class TipViewController: UIViewController {
         
     
         defaults.synchronize()
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        billField.transform = __CGAffineTransformMake(1.5, 1.5, 1.5, 1.5, 1.5, 1.5)
     }
     
     
