@@ -10,12 +10,36 @@ import UIKit
 
 
 
+
+
+
 class TipViewController: UIViewController, UITextFieldDelegate {
     
     var settings = SettingsViewController()
+    var menuIsShowing = false
     
+    @IBOutlet weak var menuView: UIView!
+
+    @IBOutlet weak var newLeadingConstraint: NSLayoutConstraint!
     
    
+    @IBAction func openMenu(_ sender: UIBarButtonItem) {
+        
+        if menuIsShowing {
+            
+            newLeadingConstraint.constant = -275
+            
+        } else {
+            newLeadingConstraint.constant = 0
+            
+            UIView.animate(withDuration: 0.3, animations: {
+                self.view.layoutIfNeeded()
+            })
+        }
+        menuIsShowing = !menuIsShowing
+        
+    }
+    
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var billField: UITextField!
@@ -31,7 +55,8 @@ class TipViewController: UIViewController, UITextFieldDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        preferredContentSize.width = 3
+        newLeadingConstraint.constant = -275
+        
         let defaults = UserDefaults.standard
         
         switchOn = defaults.bool(forKey: settings.switchButton)
@@ -44,6 +69,7 @@ class TipViewController: UIViewController, UITextFieldDelegate {
         else
         {
             tipControl.isEnabledForSegment(at: 0)
+            
         }
         
         changeTheme()
@@ -60,9 +86,11 @@ class TipViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        menuView.layer.shadowOpacity = 1
+        menuView.layer.shadowRadius = 6
         
         loadDefaults()
-        
         
         let formatter = NumberFormatter()
         formatter.numberStyle = .currency
@@ -81,6 +109,7 @@ class TipViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func onTap(_ sender: Any) {
        // view.endEditing(true)
+        
     }
     
     @IBAction func calculate(_ sender: AnyObject) {
@@ -145,5 +174,8 @@ class TipViewController: UIViewController, UITextFieldDelegate {
         defaults.set(billField.text, forKey: "billField")
         defaults.synchronize()
     }
+
 }
+
+
 

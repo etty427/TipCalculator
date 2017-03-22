@@ -58,6 +58,7 @@
 		3469C3F41E7F5BB200A0571F /* TipViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipViewController.swift; sourceTree = "<group>"; };
 		34B1C2261E730B2D00FBC025 /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		34B1C2281E73614400FBC025 /* CustomSegues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSegues.swift; sourceTree = "<group>"; };
+		34B799051E82399A0042B659 /* Jelly.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Jelly.framework; path = "../../../Library/Developer/Xcode/DerivedData/tippy-hkccqzobglwktgerdogelmjrwglo/Build/Products/Debug-iphonesimulator/Jelly/Jelly.framework"; sourceTree = "<group>"; };
 		34DA6D311E8232BF00D9923F /* SideMenu.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SideMenu.framework; path = "../../../Library/Developer/Xcode/DerivedData/tippy-hkccqzobglwktgerdogelmjrwglo/Build/Products/Debug-iphonesimulator/YALSideMenu/SideMenu.framework"; sourceTree = "<group>"; };
 		488F8ADBA49E7622DBAD8235 /* Pods_tippyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tippyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		58C81F0F7B3064EFF8C343AC /* Pods-tippyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tippyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tippyUITests/Pods-tippyUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -169,6 +170,7 @@
 		D5B074B4537450C4AA760A6D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				34B799051E82399A0042B659 /* Jelly.framework */,
 				34DA6D311E8232BF00D9923F /* SideMenu.framework */,
 				340775711E822C8B00FB2AE0 /* JTMaterialTransition.framework */,
 				D4A3E029217380BCFEB69FB7 /* Pods_tippy.framework */,

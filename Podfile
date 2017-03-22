@@ -7,7 +7,7 @@ target 'tippy' do
 
   # Pods for tippy
 
-	
+	pod "Jelly"
 
   target 'tippyTests' do
     inherit! :search_paths

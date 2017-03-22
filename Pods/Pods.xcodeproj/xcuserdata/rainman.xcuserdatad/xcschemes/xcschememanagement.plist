@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Jelly.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-tippy.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,17 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>6D76488AE08306CA3970351C092DE015</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CB3F286D26C8B91B032CFF2FBB9D40EC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>D3A897450076E2E63631A75486A91410</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>E57588911D7862C40A39CB385AC204EC</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F5AD9693395AB5CDA90DF354141D87D8</key>
 		<dict>
 			<key>primary</key>
 			<true/>

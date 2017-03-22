@@ -18,10 +18,11 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var percentButton: UISegmentedControl!
     @IBOutlet weak var switch1: UISwitch!
 
-    @IBAction func saveButtonPressed(_ sender: Any) {
+    @IBAction func saveSettingd(_ sender: Any) {
+        
         dismiss(animated: true, completion: nil)
     }
-  
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
