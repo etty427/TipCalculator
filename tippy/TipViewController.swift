@@ -9,11 +9,13 @@
 import UIKit
 
 
+
 class TipViewController: UIViewController, UITextFieldDelegate {
     
-   var settings = SettingsViewController()
-
+    var settings = SettingsViewController()
     
+    
+   
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var billField: UITextField!
@@ -25,10 +27,11 @@ class TipViewController: UIViewController, UITextFieldDelegate {
     var switchOn = false
     
     
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        
+        preferredContentSize.width = 3
         let defaults = UserDefaults.standard
         
         switchOn = defaults.bool(forKey: settings.switchButton)
@@ -58,9 +61,6 @@ class TipViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
-    
-        
         loadDefaults()
         
         
@@ -78,10 +78,6 @@ class TipViewController: UIViewController, UITextFieldDelegate {
         defaults.synchronize()
     }
     
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        billField.transform = __CGAffineTransformMake(1.5, 1.5, 1.5, 1.5, 1.5, 1.5)
-    }
-    
     
     @IBAction func onTap(_ sender: Any) {
        // view.endEditing(true)
@@ -97,7 +93,7 @@ class TipViewController: UIViewController, UITextFieldDelegate {
             
             if switchOn {
                 
-                view.backgroundColor = UIColor.lightGray
+                view.backgroundColor = UIColor.darkGray
                 tipLabel.textColor = UIColor.white
                 totalLabel.textColor = UIColor.white
                 tipControl.tintColor = UIColor.white
@@ -121,13 +117,15 @@ class TipViewController: UIViewController, UITextFieldDelegate {
         billField.text = defaults.object(forKey: "billField") as? String
         
     }
+    
+    
     @IBAction func onEditingChanged(sender: AnyObject) {
         updateTip()
 
     }
 
     func updateTip() {
-        let tipPercentages = [0.18,0.2,0.25]
+        let tipPercentages = [0.1,0.14,0.18,0.2,0.25]
         
         let formatter = NumberFormatter()
         formatter.numberStyle = .decimal
@@ -148,3 +146,4 @@ class TipViewController: UIViewController, UITextFieldDelegate {
         defaults.synchronize()
     }
 }
+

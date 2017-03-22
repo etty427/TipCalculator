@@ -7,7 +7,7 @@ target 'tippy' do
 
   # Pods for tippy
 
-	#pod “Money”
+	
 
   target 'tippyTests' do
     inherit! :search_paths

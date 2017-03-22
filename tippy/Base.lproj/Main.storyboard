@@ -17,6 +17,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.25" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="money-29047_1280" id="Srs-cc-yET">
+                                <rect key="frame" x="0.0" y="63" width="416" height="673"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Total -&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="W04-kx-YEA">
                                 <rect key="frame" x="16" y="339" width="159" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -39,6 +43,8 @@
                                 <rect key="frame" x="16" y="451" width="378" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
+                                    <segment title="10%"/>
+                                    <segment title="14%"/>
                                     <segment title="18%"/>
                                     <segment title="20%"/>
                                     <segment title="25%"/>
@@ -79,7 +85,7 @@
                     <navigationItem key="navigationItem" title="Tip Calculator" id="0Jl-0F-eF0">
                         <barButtonItem key="rightBarButtonItem" title="Settings" id="vZY-vi-ddp">
                             <connections>
-                                <segue destination="Pc8-bW-IvA" kind="push" customClass="CustomSegues" customModule="tippy" id="KvJ-eo-B4Z"/>
+                                <segue destination="Pc8-bW-IvA" kind="custom" customClass="CustomSegues" customModule="tippy" id="KvJ-eo-B4Z"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -125,6 +131,8 @@
                                 <rect key="frame" x="20" y="200" width="374" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
+                                    <segment title="10%"/>
+                                    <segment title="14%"/>
                                     <segment title="18%"/>
                                     <segment title="20%"/>
                                     <segment title="25%"/>
@@ -197,6 +205,9 @@
             <point key="canvasLocation" x="1089" y="-695"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="money-29047_1280" width="1280" height="640"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

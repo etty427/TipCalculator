@@ -54,9 +54,11 @@
 		289B7D8E1E70F28500BB95B9 /* tippyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tippyUITests.swift; sourceTree = "<group>"; };
 		289B7D901E70F28500BB95B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		289B7D9C1E7107A000BB95B9 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		340775711E822C8B00FB2AE0 /* JTMaterialTransition.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JTMaterialTransition.framework; path = "../../../Library/Developer/Xcode/DerivedData/tippy-hkccqzobglwktgerdogelmjrwglo/Build/Products/Debug-iphonesimulator/JTMaterialTransition/JTMaterialTransition.framework"; sourceTree = "<group>"; };
 		3469C3F41E7F5BB200A0571F /* TipViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipViewController.swift; sourceTree = "<group>"; };
 		34B1C2261E730B2D00FBC025 /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		34B1C2281E73614400FBC025 /* CustomSegues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSegues.swift; sourceTree = "<group>"; };
+		34DA6D311E8232BF00D9923F /* SideMenu.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SideMenu.framework; path = "../../../Library/Developer/Xcode/DerivedData/tippy-hkccqzobglwktgerdogelmjrwglo/Build/Products/Debug-iphonesimulator/YALSideMenu/SideMenu.framework"; sourceTree = "<group>"; };
 		488F8ADBA49E7622DBAD8235 /* Pods_tippyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tippyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		58C81F0F7B3064EFF8C343AC /* Pods-tippyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tippyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tippyUITests/Pods-tippyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5C4F37AD00532B01D8ED0BE4 /* Pods-tippy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tippy.release.xcconfig"; path = "Pods/Target Support Files/Pods-tippy/Pods-tippy.release.xcconfig"; sourceTree = "<group>"; };
@@ -167,6 +169,8 @@
 		D5B074B4537450C4AA760A6D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				34DA6D311E8232BF00D9923F /* SideMenu.framework */,
+				340775711E822C8B00FB2AE0 /* JTMaterialTransition.framework */,
 				D4A3E029217380BCFEB69FB7 /* Pods_tippy.framework */,
 				EF559EEA086516D9A5282CC8 /* Pods_tippyTests.framework */,
 				488F8ADBA49E7622DBAD8235 /* Pods_tippyUITests.framework */,
