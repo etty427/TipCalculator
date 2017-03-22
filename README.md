@@ -38,7 +38,7 @@ I had issues save the switch controls.  Changing the theme to dark was a little 
 
 ## License
 
-    Copyright [2017] [Various Sources]
+    Copyright 2017 Tyrone Rainey
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
