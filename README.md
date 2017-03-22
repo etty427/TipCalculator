@@ -4,7 +4,7 @@
 
 Submitted by: **Tyrone Rainey**
 
-Time spent: **20** hours spent in total
+Time spent: **30** hours spent in total
 
 ## User Stories
 
@@ -13,19 +13,22 @@ The following **required** functionality is complete:
 * [ ] User can enter a bill amount, choose a tip percentage, and see the tip and total values.
 
 The following **optional** features are implemented:
-* [ ] UI animations
-* [ ] Remembering the bill amount across app restarts 
+* [ ] UI animations.
+* [ ] Added Side Menu.
+* [ ] Remembering the bill amount across app restarts. 
 * [ ] Making sure the keyboard is always visible and the bill amount is always the first responder. This way the user doesn't have to tap anywhere to use this app. Just launch the app and start typing.
 
 The following **additional** features are implemented:
 
 - [ ] List anything else that you can get done to improve the app functionality!
+* [ ] Updated UI.
+* [ ] Dark theme is fully functional.
 
 ## Video Walkthrough 
 
 Here's a walkthrough of implemented user stories:
 
-http://imgur.com/ELHs4C3
+http://imgur.com/a/TNPmY
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
