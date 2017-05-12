@@ -4,7 +4,7 @@
 
 Submitted by: **Tyrone Rainey**
 
-Time spent: **30** hours spent in total
+Time spent: **15** hours spent in total
 
 ## User Stories
 
